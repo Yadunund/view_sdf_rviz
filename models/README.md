@@ -1,2 +1,2 @@
 - Copy or symlink sdf model folders here.
-- Update the mesh `<uri>` to follow `package://view_sdf_rviz/models/<model_name>/<path_to_mesh>` pattern.
+- Update the mesh `<uri>` to follow `package://view_sdf_rviz/models/<model_name>/<path_to_mesh>` pattern. See [Cubes/model.sdf](./Cubes/model.sdf).

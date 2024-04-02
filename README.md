@@ -1,5 +1,7 @@
 # view_sdf_rviz
-View SDF models on RViz
+![](./cubes.png)
+View SDF models on RViz.
+
 
 Requirements
 - ROS 2 Rolling/Iron/Humble
@@ -27,7 +29,7 @@ colcon build
 ```bash
 cd ~/ws
 source install/setup.bash
-ros2 launch view_sdf_rviz view_sdf.launch.py sdf_file:=<path to model.sdf in models directory>
+ros2 launch view_sdf_rviz view_sdf.launch.py sdf_file:=src/view_sdf_rviz/models/Cubes/model.sdf # Replace with path to your model.
 ```
 
 RViz should open up with the model visualized. Make sure to set the global frame to one of the links in the model.
