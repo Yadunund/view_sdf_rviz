@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.6" xmlns:intrinsic='https://intrinsic.ai/'>
+  <model name="Cubes">
+    <link name="cube1">
+      <inertial>
+        <mass>2</mass>
+        <inertia>
+          <ixx>1.333333333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.333333333</iyy>
+          <iyz>0</iyz>
+          <izz>1.333333333</izz>
+        </inertia>
+      </inertial>
+      <visual name="visual1">
+        <geometry>
+          <mesh>
+            <uri>package://view_sdf_rviz/models/Cubes/meshes/cube.glb</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name ="Cube1">
+        <geometry>
+          <box>
+            <size>2 2 2</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="cube2">
+      <pose>0 0 2 0 0 0</pose>
+      <inertial>
+        <mass>2</mass>
+        <inertia>
+          <ixx>1.333333333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.333333333</iyy>
+          <iyz>0</iyz>
+          <izz>1.333333333</izz>
+        </inertia>
+      </inertial>
+      <visual name="visual2">
+        <geometry>
+          <mesh>
+            <uri>package://view_sdf_rviz/models/Cubes/meshes/cube.glb</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name ="Cube2">
+        <geometry>
+          <box>
+            <size>2 2 2</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="cube_joint" type="revolute">
+      <parent>cube1</parent>
+      <child>cube2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+      <limit>
+        <lower>-1.0e+9</lower>
+        <upper>1.0e+9</upper>
+      </limit>
+    </joint>
+
+  </model>
+</sdf>
